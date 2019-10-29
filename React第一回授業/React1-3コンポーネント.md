@@ -1,9 +1,11 @@
 ## コンポーネント構築
 それでは、実際にReactでアプリを作ってみましょう。今回は、TODOアプリを作っていきます。目標は、[このようなサイト(githubPage)](https://sawaki1998.github.io/React-class/)になります。
+
 1. コンポーネント構築
 1. データの受け渡しと機能実装
 1. スタイルをつける
 1. マテリアルデザインを取り入れる
+
 の順番で作っていきます。
 
 ### 基本機能の説明
@@ -36,12 +38,18 @@ Reactでは、アプリをコンポーネントに分けて管理します。
 <br>
 first-app/src/App.jsをApp.jsxとします。
 App.jsxファイルを開くと、ReactをインポートしてAppという関数を定義し、htmlのようなものをreturnして、最初にyarn startで表示されたものを返しています。これがjsxの記法になります。
-Appをexportすることで、public/index.html内の<div id="root"></div>内にAppのreturnが入るようになっています。
+Appをexportすることで、public/index.html内の
+
+```html
+<div id="root"></div>
+```
+
+内にAppのreturnが入るようになっています。
 <br>
 それでは、実際にTODOアプリのためのApp.jsxを記述していきましょう。
-app.jsx内のコードをすべて消して、以下のコードを書いてみてください。
+App.jsx内のコードをすべて消して、以下のコードを書いてみてください。
 
-```
+```js:App.jsx
 import React from "react";
 import Form from "./Form";
 import TodoList from "./TodoList";
@@ -57,6 +65,7 @@ class App extends React.Component {
 };
 export default App;
 ```
+
 コンポーネントは、
 
 1. Reactや他のコンポーネント等のimport
@@ -73,18 +82,20 @@ export default App;
 を訪れるとHello, React world!が表示されているはずです。
 <br>それでは、renderメソッド内のreturn内を、以下のように変更しましょう。
 
-```
+```js:App.jsx
+：
 <div>
     <From></Form>
     <TodoList></TodoList>
 </div>
+：
 ```
 このように、importしたコンポーネントは、htmlのタグのように記述して使います。
 
 #### Form.jsxコンポーネント
 次にTODOを追加するためのformコンポーネントを作っていきます。src内にForm.jsxを作成し、App.jsxのコンポーネントを記述した時のテンプレートを使って自分でコードを書いてみてください。TODOに必要な項目は、「TODOのタイトル」「TODOの詳細」「完了したかどうか(Boolean)」とします。以下のようなコードになります。
 
-```
+```js:Form.jsx
 import React from "react"
 
 export default class Form extends React.Component {
@@ -103,7 +114,7 @@ export default class Form extends React.Component {
 
 #### TodoList.jsxコンポーネント
 TODOリストのコンポーネントを作ります。同じように、src内にTodoList.jsxを作成します。自分で記述してみた上で、以下のコードと照らし合わせてみてください。
-```
+```js:TodoList.jsx
 import React from "react"
 import TodoItem from "./TodoItem"
 
@@ -120,7 +131,7 @@ export default class TodoList extends React.Component {
 
 #### TodoItem.jsxコンポーネント
 最後に、TODOアイテムのコンポーネントを作ります。src内にTodoItem.jsxを作成し、コードを記述してみてください。以下のようになるかと思います。
-```
+```js:TodoItem.jsx
 import React from "react"
 
 export default class TodoItem extends React.Component {
@@ -141,8 +152,10 @@ export default class TodoItem extends React.Component {
 <br><br>
 ここまで、コンポーネントを作成してきました。yarn startを実行してhttp://localhost:3000/
 を訪れると、画像のようなフォームとTODOリストが見れると思います。
+<br>
+
 ![フォームとTODOリスト](./コンポーネント.PNG)
 
 ###### 備考
-classは予約語なのでclassNameになります。
+classは予約語なのでclassNameになります。<br>
 eslintが入っていない場合は入れましょう。

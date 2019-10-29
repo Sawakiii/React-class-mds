@@ -15,6 +15,7 @@ Reactとは、UIに特化したJavaScriptライブラリです。
 airbnbやUber、facebookなどがReactを使っています。
 
 [React入門1(WEB企画LAB)](https://webkikaku.co.jp/blog/javascript/react-start/)
+<br>
 [React入門2(qiita)](https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048)
 
 ### なにができるのか

@@ -1,7 +1,9 @@
 ## propsとstateの練習
 ここまでの知識があれば、
+
 - タスクの削除機能
 - タスクの編集機能
+
 を実装できるはずです。
 
 これまでの復習をしながら自分で実装してみてください。どうしてもわからない点があったりヒントがほしい場合は以下のコードと解説を読んでみてください。コードの差分が見たい場合は該当するSHA1値の[github](https://github.com/sawaki1998/React-class/commits/master)をチェックしてみてください。
@@ -9,9 +11,11 @@
 ### タスクの削除機能の実装[SHA1値 : a566a23]
 タスクの削除機能は、完了・戻す切替機能とほぼ同じやり方で実装できます。完了ボタンの隣に削除ボタンをつけて、ボタンを押すと削除の確認をしたのち、OKを押すと削除する機能になります。
 ここでは、
+
 1. App.jsxでのメソッド定義
 1. メソッドの受け渡し
 1. TodoItem.jsxでの機能実装
+
 の順に記述していきます。
 
 #### App.jsxでのメソッド定義
@@ -183,9 +187,11 @@ render() {
 }
 ```
 ここでは、
+
 - isEditのステートへの追加(他のメソッド内含め)
 - handleEditメソッドの記述
 - handleEditメソッドの受け渡し
+
 を行っています。
 <br>
 次に、handleEditをTodoItem.jsxまで受け渡すために、TodoList.jsxを開きましょう。
@@ -322,16 +328,23 @@ handleEditSubmitでは、e.target.名前.valueで、入力された内容を取�
 それでは、最後にTodoItem.jsxでのhandleEditSubmitの実行処理を書いていきましょう。
 formのonSubmitプロパティに以下のように記述してください。
 ```js:TodoItem.jsx
+：
 <form onSubmit={(e)=>{this.props.handleEditSubmit(e, id)}}>
+：
 ```
 さあ、それでは、アプリを走らせてみて、編集完了を押してみてください。
 <br>
 編集完了を押すと、ページが更新されてしまい、うまくいかないと思います。このエラーは、submitのデフォルト設定がデータを送信して新たなページを読み込むようにできているからです。TODOの追加機能を実装した時とおなじように、e.preventDefault()を追加しておきましょう。
 
 ```js:TodoItem.jsx
+：
 <form onSubmit={(e)=>{
     e.preventDefault()
     this.props.handleEditSubmit(e, id)}}>
+：
 ```
-これで、編集機能が実装できるはずです。確認してみてください。
+これで、編集機能が実装できるはずです。確認してみてください。画像は、1つ目のTODOを編集して変更した画像です。
+
+<br>
+
 ![編集完了機能](./編集完了.PNG)

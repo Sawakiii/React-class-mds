@@ -19,8 +19,10 @@ propsは不変データで、更新や変更ができません。
 それでは、TODOアプリのデータの受け渡しと機能実装を通して、stateとpropsの使い方を学んでいきましょう。
 
 実装する残りの機能は、
+
 1. タスクの追加機能
 1. タスクの完了・戻す切替機能
+
 の2つになります。
 
 これらの機能を実装するために、コンポーネント間でのTODOデータの受け渡しができるようにしましょう。
@@ -70,8 +72,10 @@ class App extends React.Component {
 ・
 ```
 ここでは、
+
 1. クラスのコンストラクタであるstateの定義
 1. stateのTodoListへの受け渡し
+
 を行っています。
 
 super()というのは、継承元のコンストラクタを呼ぶ関数です。これによってthis.stateが使えるようになります。よって、ここではstateを定義していなくてもthis.stateが使用できています。
@@ -143,7 +147,7 @@ render() {
 ・
 ```
 map関数は、配列.map(新しい配列に変更する関数)で、配列を関数処理して返します。
-詳細は[こちら(mdn)](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+詳細は[こちら(mdn)](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)になります。<br>
 Reactではfor文よりmap関数の方がコードが少ないのでmap関数で書くのを推奨します。
 
 #### TodoItem.jsxのコンポーネントのpropsの受け渡し
