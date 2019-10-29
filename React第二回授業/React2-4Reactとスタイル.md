@@ -72,7 +72,9 @@ return (
         )
 ：
 ```
-このようにして、コンポーネントにスタイルをつけていくことができます。
+このようにして、コンポーネントにスタイルをつけていくことができます。<br>
+![styled](./styled.PNG)
+
 
 ### Reactとmaterial-UI[SHA1値 : 63b6013]
 Reactにスタイルをつける場合に、material-UIを使用することができます。
@@ -111,10 +113,11 @@ Buttonをインポートし、Buttonタグとして使用しただけです。
 ```js:Form.jsx
 <Button type="submit" variant="contained">追加</Button>
 ```
-にすると、ボタンにスタイルがついていると思います。
+にすると、画像のようにボタンにスタイルがついていると思います。<br>
+![material-ui](./material-ui-button.PNG)
 <br>
 
-このようにして、material-uiを使っていきます。それでは、[完成像サイト]()を見ながら、material-uiを実装して、同じスタイルを適用してみてください。
+このようにして、material-uiを使っていきます。それでは、[完成像サイト(githubPage)](https://sawaki1998.github.io/React-class/)を見ながら、material-uiを実装して、同じスタイルを適用してみてください。
 <br>
 ヒントは、Paper, TextField, Buttonです。
 <br>
@@ -218,19 +221,3 @@ if (this.props.isEdit === true) {
         )
 ：
 ```
-
-
-## 備考 : 最新の開発現場
-### TypeScript
-### Redux
-### React hooks
-
-
-
-###### 備考
-引数渡したいとき
-()=>{handleClick(id)}
-
-
-
-

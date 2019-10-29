@@ -1,5 +1,5 @@
 ## コンポーネント構築
-それでは、実際にReactでアプリを作ってみましょう。今回は、TODOアプリを作っていきます。目標は、[このようなサイト]()になります。
+それでは、実際にReactでアプリを作ってみましょう。今回は、TODOアプリを作っていきます。目標は、[このようなサイト(githubPage)](https://sawaki1998.github.io/React-class/)になります。
 1. コンポーネント構築
 1. データの受け渡しと機能実装
 1. スタイルをつける
@@ -140,7 +140,8 @@ export default class TodoItem extends React.Component {
 ```
 <br><br>
 ここまで、コンポーネントを作成してきました。yarn startを実行してhttp://localhost:3000/
-を訪れると、フォームとTODOリストが見れると思います。
+を訪れると、画像のようなフォームとTODOリストが見れると思います。
+![フォームとTODOリスト](./コンポーネント.PNG)
 
 ###### 備考
 classは予約語なのでclassNameになります。

@@ -8,7 +8,7 @@ yarn create react-app アプリ名
 ```
 yarn start
 ```
-### src内のコンポーネントを、以下の書き方で作成していく
+### src内のコンポーネントを、以下の書き方で作成していきます
 ```
 import React from "react";
 import コンポーネント from "コンポーネントまでのパス";
