@@ -4,6 +4,8 @@ Reactでデータを扱うために、stateとpropsという概念を理解し�
 
 ## stateとpropsの基本-データの受け渡し[SHA1値 : 7822143]
 Reactでは、アプリをコンポーネントに分割したため、定義した変数やデータをコンポーネント同士で受け渡しする必要があります。その際に用いるのが、stateとpropsです。
+<br>
+ちなみに、上記のSHA1値というのは、このReactカリキュラムの完成コードと作成過程のコードが[こちらのgithub](https://github.com/sawaki1998/React-class/commits/master)に公開されており、該当するSHA1値のコミットを参照すると、ソースコードの差分を確認できます。コード全てでなく、差分の確認ができますので、コードの改変が楽になるかと思います。
 
 ### stateとは
 stateとは、そのコンポーネントが持っている状態(データ)です。
@@ -78,7 +80,7 @@ class App extends React.Component {
 
 を行っています。
 
-super()というのは、継承元のコンストラクタを呼ぶ関数です。これによってthis.stateが使えるようになります。よって、ここではstateを定義していなくてもthis.stateが使用できています。
+super()というのは、継承元のコンストラクタを呼ぶ関数です。これによってthis.stateが使えるようになり、ここではstateを定義していなくてもthis.stateが使用できています。
 
 ```
 <TodoList todos={this.state.todos}>

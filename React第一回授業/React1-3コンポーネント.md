@@ -37,7 +37,38 @@ Reactでは、アプリをコンポーネントに分けて管理します。
 まずは、TODOアプリの全体を統括するコンポーネントから記述していきます。
 <br>
 first-app/src/App.jsをApp.jsxとします。
-App.jsxファイルを開くと、ReactをインポートしてAppという関数を定義し、htmlのようなものをreturnして、最初にyarn startで表示されたものを返しています。これがjsxの記法になります。
+App.jsxファイルを開くと、以下のようなコードが書かれていると思います。
+
+```jsx:App.jsx
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+```
+ここでは、ReactをインポートしてAppという関数を定義し、htmlのようなものをreturnして、最初にyarn startで表示されたものを返しています。これがjsxの記法になります。
 Appをexportすることで、public/index.html内の
 
 ```html
@@ -75,7 +106,11 @@ export default App;
 
 で構成されます。
 <br>
-基本的にクラス内のメソッドを機能として追加し、renderメソッドはコンパイル後のhtmlを書くイメージです。renderメソッドの返り値は、ひとつのhtml要素である必要があるため、divで囲っています。
+基本的にクラス内のメソッドを機能として追加し、renderメソッドはコンパイル後のhtmlを書くイメージです。
+<br>
+
+renderメソッドの返り値は、**ひとつのhtml要素である**ため、divで囲っています。
+
 <br>
 ここでは、Appが全体のコンポーネントとなり、その中にFormとTodoListコンポーネントがあるため、その2つをインポートしています。
 ここで、yarn startを実行し、http://localhost:3000/

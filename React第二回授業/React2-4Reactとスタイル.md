@@ -19,8 +19,27 @@ css in jsを利用するには、styled-componentsをインストールする必
 yarn add styled-components
 ```
 <br>
+styled-componentsは、以下のフォーマットで使います。
+
+```
+import styled from "styled-components"
+const タグ名 = styled.htmlのタグ名`
+cssの内容の記述
+`
+：
+render() {
+    return (
+    ：
+    <タグ名></タグ名>
+    ：
+    )
+}
+：
+```
+
+<br>
 それでは、実際に使っていきます。
-まずは、入力フォームのタイトルと詳細が横並びになっているのを立て並びにしてみましょう。
+まずは、入力フォームのタイトルと詳細が横並びになっているのを縦並びにしてみましょう。
 以下のコードをForm.jsxに書いてください。
 
 ```js:Form.jsx
@@ -46,16 +65,6 @@ export default class Form extends React.Component {
 }
 ```
 
-styled-componentsをインストールしたのち、以下のフォーマットで使います。
-```
-import styled from "styled-components"
-const タグ名 = styled.htmlのタグ名`
-cssの内容の記述
-`
-：
-<タグ名></タグ名>
-：
-```
 <br>
 それでは、これをヒントとして、TodoItem.jsxでリストの・をなくしてみてください。
 下記のようなコードになります。
